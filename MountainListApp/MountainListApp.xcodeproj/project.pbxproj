@@ -74,6 +74,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A83E2625BC7B7200587112 /* Build configuration list for PBXNativeTarget "MountainListApp" */;
 			buildPhases = (
+				84A83E2A25BC7DC700587112 /* SwiftLint */,
 				84A83E0E25BC7B6F00587112 /* Sources */,
 				84A83E0F25BC7B6F00587112 /* Frameworks */,
 				84A83E1025BC7B6F00587112 /* Resources */,
@@ -131,6 +132,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		84A83E2A25BC7DC700587112 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f ../Mintfile ]] ; then\n  xcrun --sdk macosx mint run swiftlint\nelse\n  echo \"SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84A83E0E25BC7B6F00587112 /* Sources */ = {

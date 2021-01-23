@@ -1,0 +1,8 @@
+included:
+- MountainListApp/
+
+excluded:
+- Pods/
+
+line_length: 200
+large_tuple: 5
