@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MountainListController: UIViewController {
 
+    @IBOutlet weak var tableVIew: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
