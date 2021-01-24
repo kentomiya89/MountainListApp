@@ -9,7 +9,16 @@ import UIKit
 
 class MountainListController: UIViewController {
 
-    @IBOutlet weak var tableVIew: UITableView!
+    private let notificationCenter = NotificationCenter.default
+
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.estimatedRowHeight = 124
+            tableView.rowHeight = UITableView.automaticDimension
+        }
+    }
 
     var model: MountainListModel! {
         didSet {
@@ -20,6 +29,21 @@ class MountainListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         model = MountainListModel()
+
+        // setUp系
+        setUpNotifications()
+        setUpTableView()
+    }
+
+    func setUpNotifications() {
+        notificationCenter.addObserver(self,
+                                       selector: #selector(reloadData),
+                                       name: .fetchMountainInfo,
+                                       object: nil)
+    }
+
+    func setUpTableView() {
+        tableView.register(UINib(nibName: NibFileName.mountainCell, bundle: nil), forCellReuseIdentifier: TableViewCellID.mountainCell)
     }
 }
 
@@ -30,4 +54,26 @@ extension MountainListController {
         // 初回リクエスト
         model.fetchMountainInfo()
     }
+}
+
+extension MountainListController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        model.mountains.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellID.mountainCell) as? MountainCell else { return UITableViewCell() }
+
+        cell.configureContent(mountainInfo: model.mountains[indexPath.row])
+        return cell
+    }
+
+    @objc func reloadData() {
+        tableView.reloadData()
+    }
+}
+
+extension MountainListController: UITableViewDelegate {
+
 }

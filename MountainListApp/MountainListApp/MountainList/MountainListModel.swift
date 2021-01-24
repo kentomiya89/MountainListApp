@@ -13,11 +13,11 @@ protocol MountainListModelInput {
 
 final class MountainListModel: MountainListModelInput {
 
-//    private let notificationCenter = NotificationCenter.default
+    private let notificationCenter = NotificationCenter.default
 
     private(set) var mountains: [MountainInfo] = [] {
         didSet {
-            // notificationする
+            notificationCenter.post(name: .fetchMountainInfo, object: nil)
         }
     }
 
@@ -29,7 +29,6 @@ final class MountainListModel: MountainListModelInput {
 
             switch result {
             case .success(let response):
-                print(response)
                 self?.mountains = response
             case .failure: print("取得失敗")
             }

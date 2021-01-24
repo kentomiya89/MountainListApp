@@ -19,3 +19,7 @@ extension String {
        }
    }
 }
+
+extension Notification.Name {
+    static let fetchMountainInfo = Notification.Name("fetchMountainInfo")
+}
