@@ -76,4 +76,12 @@ extension MountainListController: UITableViewDataSource {
 
 extension MountainListController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: StoryboardSegue.MountainList.showMountainDetail.rawValue, sender: nil)
+    }
+}
+
+// MARK: Segue
+extension MountainListController {
+
 }

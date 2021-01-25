@@ -20,6 +20,8 @@
 		845D5ADC25BDDF260051FBF7 /* IB-Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5AD925BDDF250051FBF7 /* IB-Segues+Generated.swift */; };
 		845D5ADD25BDDF260051FBF7 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5ADA25BDDF250051FBF7 /* IB-Scenes+Generated.swift */; };
 		845D5ADE25BDDF260051FBF7 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5ADB25BDDF260051FBF7 /* XCAssets+Generated.swift */; };
+		845D5AFC25BE8E060051FBF7 /* MountainDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5AFB25BE8E060051FBF7 /* MountainDetailViewController.swift */; };
+		845D5B0025BE8E180051FBF7 /* MountainDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D5AFF25BE8E180051FBF7 /* MountainDetail.storyboard */; };
 		84A83E1625BC7B6F00587112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A83E1525BC7B6F00587112 /* AppDelegate.swift */; };
 		84A83E1A25BC7B6F00587112 /* MountainListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A83E1925BC7B6F00587112 /* MountainListController.swift */; };
 		84A83E1D25BC7B6F00587112 /* MountainList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A83E1B25BC7B6F00587112 /* MountainList.storyboard */; };
@@ -42,6 +44,8 @@
 		845D5AD925BDDF250051FBF7 /* IB-Segues+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Segues+Generated.swift"; sourceTree = "<group>"; };
 		845D5ADA25BDDF250051FBF7 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
 		845D5ADB25BDDF260051FBF7 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		845D5AFB25BE8E060051FBF7 /* MountainDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainDetailViewController.swift; sourceTree = "<group>"; };
+		845D5AFF25BE8E180051FBF7 /* MountainDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MountainDetail.storyboard; sourceTree = "<group>"; };
 		84A83E1225BC7B6F00587112 /* MountainListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountainListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A83E1525BC7B6F00587112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A83E1925BC7B6F00587112 /* MountainListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainListController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		845D5AFA25BE8D830051FBF7 /*  MoutainDetail */ = {
+			isa = PBXGroup;
+			children = (
+				845D5AFB25BE8E060051FBF7 /* MountainDetailViewController.swift */,
+				845D5AFF25BE8E180051FBF7 /* MountainDetail.storyboard */,
+			);
+			path = " MoutainDetail";
+			sourceTree = "<group>";
+		};
 		84A83E0925BC7B6F00587112 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +160,7 @@
 			children = (
 				845D5AD825BDD1780051FBF7 /* Generated */,
 				8422369625BD5C7E000D4D86 /* MountainList */,
+				845D5AFA25BE8D830051FBF7 /*  MoutainDetail */,
 				8422368825BD2140000D4D86 /* API */,
 				8422369E25BD681A000D4D86 /* Misc */,
 				84A83E1525BC7B6F00587112 /* AppDelegate.swift */,
@@ -233,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845D5B0025BE8E180051FBF7 /* MountainDetail.storyboard in Resources */,
 				84A83E2225BC7B7200587112 /* LaunchScreen.storyboard in Resources */,
 				842236A525BD71FE000D4D86 /* MountainCell.xib in Resources */,
 				84A83E1F25BC7B7200587112 /* Image.xcassets in Resources */,
@@ -338,6 +353,7 @@
 				8422369025BD27C5000D4D86 /* APIClient.swift in Sources */,
 				8422369425BD598D000D4D86 /* MountainInfo.swift in Sources */,
 				842236AD25BD7EF5000D4D86 /* MountainCell.swift in Sources */,
+				845D5AFC25BE8E060051FBF7 /* MountainDetailViewController.swift in Sources */,
 				8422368D25BD26D2000D4D86 /* YAMAPAPI.swift in Sources */,
 				845D5ADC25BDDF260051FBF7 /* IB-Segues+Generated.swift in Sources */,
 				845D5ADD25BDDF260051FBF7 /* IB-Scenes+Generated.swift in Sources */,
