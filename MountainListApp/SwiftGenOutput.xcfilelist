@@ -2,5 +2,8 @@
 $(SRCROOT)/MountainListApp/Generated/IB-Scenes+Generated.swift
 $(SRCROOT)/MountainListApp/Generated/IB-Segues+Generated.swift
 
+# strings
+$(SRCROOT)/MountainListApp/Generated/Strings+Generated.swift
+
 # xcassets
 $(SRCROOT)/MountainListApp/Generated/XCAssets+Generated.swift

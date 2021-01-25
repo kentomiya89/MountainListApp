@@ -1,6 +1,10 @@
 # ib
+$(SRCROOT)/MountainListApp/ MoutainDetail/MountainDetail.storyboard
 $(SRCROOT)/MountainListApp/Base.lproj/LaunchScreen.storyboard
 $(SRCROOT)/MountainListApp/MountainList/Base.lproj/MountainList.storyboard
+
+# strings
+$(SRCROOT)/MountainListApp/Resources/Localized.strings
 
 # xcassets
 $(SRCROOT)/MountainListApp/Image.xcassets
