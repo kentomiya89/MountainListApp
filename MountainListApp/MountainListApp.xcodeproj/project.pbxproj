@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8422368625BD20F1000D4D86 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 8422368525BD20F1000D4D86 /* SwiftPackageProductDependency */; };
+		8422368625BD20F1000D4D86 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8422368525BD20F1000D4D86 /* Alamofire */; };
 		8422368A25BD215B000D4D86 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422368925BD215B000D4D86 /* APIRequest.swift */; };
 		8422368D25BD26D2000D4D86 /* YAMAPAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422368C25BD26D2000D4D86 /* YAMAPAPI.swift */; };
 		8422369025BD27C5000D4D86 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422368F25BD27C5000D4D86 /* APIClient.swift */; };
@@ -17,6 +17,9 @@
 		842236A525BD71FE000D4D86 /* MountainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842236A425BD71FE000D4D86 /* MountainCell.xib */; };
 		842236A925BD7A22000D4D86 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842236A825BD7A22000D4D86 /* Define.swift */; };
 		842236AD25BD7EF5000D4D86 /* MountainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842236AC25BD7EF5000D4D86 /* MountainCell.swift */; };
+		845D5ADC25BDDF260051FBF7 /* IB-Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5AD925BDDF250051FBF7 /* IB-Segues+Generated.swift */; };
+		845D5ADD25BDDF260051FBF7 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5ADA25BDDF250051FBF7 /* IB-Scenes+Generated.swift */; };
+		845D5ADE25BDDF260051FBF7 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5ADB25BDDF260051FBF7 /* XCAssets+Generated.swift */; };
 		84A83E1625BC7B6F00587112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A83E1525BC7B6F00587112 /* AppDelegate.swift */; };
 		84A83E1A25BC7B6F00587112 /* MountainListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A83E1925BC7B6F00587112 /* MountainListController.swift */; };
 		84A83E1D25BC7B6F00587112 /* MountainList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A83E1B25BC7B6F00587112 /* MountainList.storyboard */; };
@@ -36,6 +39,9 @@
 		842236A425BD71FE000D4D86 /* MountainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MountainCell.xib; sourceTree = "<group>"; };
 		842236A825BD7A22000D4D86 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		842236AC25BD7EF5000D4D86 /* MountainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainCell.swift; sourceTree = "<group>"; };
+		845D5AD925BDDF250051FBF7 /* IB-Segues+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Segues+Generated.swift"; sourceTree = "<group>"; };
+		845D5ADA25BDDF250051FBF7 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
+		845D5ADB25BDDF260051FBF7 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		84A83E1225BC7B6F00587112 /* MountainListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountainListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A83E1525BC7B6F00587112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A83E1925BC7B6F00587112 /* MountainListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainListController.swift; sourceTree = "<group>"; };
@@ -52,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8422368625BD20F1000D4D86 /* BuildFile in Frameworks */,
+				8422368625BD20F1000D4D86 /* Alamofire in Frameworks */,
 				ECD8F54BEB1976E2642BA051 /* Pods_MountainListApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,16 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		845D5AD825BDD1780051FBF7 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				845D5ADA25BDDF250051FBF7 /* IB-Scenes+Generated.swift */,
+				845D5AD925BDDF250051FBF7 /* IB-Segues+Generated.swift */,
+				845D5ADB25BDDF260051FBF7 /* XCAssets+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		84A83E0925BC7B6F00587112 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +145,7 @@
 		84A83E1425BC7B6F00587112 /* MountainListApp */ = {
 			isa = PBXGroup;
 			children = (
+				845D5AD825BDD1780051FBF7 /* Generated */,
 				8422369625BD5C7E000D4D86 /* MountainList */,
 				8422368825BD2140000D4D86 /* API */,
 				8422369E25BD681A000D4D86 /* Misc */,
@@ -146,7 +163,6 @@
 				EDA1158C2E9EC73EC26E0D09 /* Pods-MountainListApp.debug.xcconfig */,
 				89C603588561686341558C34 /* Pods-MountainListApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -159,6 +175,7 @@
 			buildPhases = (
 				5AAA9AA2D0D1FE150074EB72 /* [CP] Check Pods Manifest.lock */,
 				84A83E2A25BC7DC700587112 /* SwiftLint */,
+				845D5AE025BDE1440051FBF7 /* SwiftGen */,
 				84A83E0E25BC7B6F00587112 /* Sources */,
 				84A83E0F25BC7B6F00587112 /* Frameworks */,
 				84A83E1025BC7B6F00587112 /* Resources */,
@@ -170,7 +187,7 @@
 			);
 			name = MountainListApp;
 			packageProductDependencies = (
-				8422368525BD20F1000D4D86 /* SwiftPackageProductDependency */,
+				8422368525BD20F1000D4D86 /* Alamofire */,
 			);
 			productName = MountainListApp;
 			productReference = 84A83E1225BC7B6F00587112 /* MountainListApp.app */;
@@ -200,7 +217,7 @@
 			);
 			mainGroup = 84A83E0925BC7B6F00587112;
 			packageReferences = (
-				8422368425BD20F1000D4D86 /* RemoteSwiftPackageReference */,
+				8422368425BD20F1000D4D86 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 84A83E1325BC7B6F00587112 /* Products */;
 			projectDirPath = "";
@@ -265,6 +282,27 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		845D5AE025BDE1440051FBF7 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/SwiftGenInput.xcfilelist",
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/SwiftGenOutput.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f ../Mintfile ]] ; then\n  mint run swiftgen config run --config swiftgen.yml\nelse\n  echo \"SwiftGen not installed\"\nfi\n";
+		};
 		84A83E2A25BC7DC700587112 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845D5ADE25BDDF260051FBF7 /* XCAssets+Generated.swift in Sources */,
 				84A83E1A25BC7B6F00587112 /* MountainListController.swift in Sources */,
 				842236A925BD7A22000D4D86 /* Define.swift in Sources */,
 				8422369825BD5CB3000D4D86 /* MountainListModel.swift in Sources */,
@@ -300,6 +339,8 @@
 				8422369425BD598D000D4D86 /* MountainInfo.swift in Sources */,
 				842236AD25BD7EF5000D4D86 /* MountainCell.swift in Sources */,
 				8422368D25BD26D2000D4D86 /* YAMAPAPI.swift in Sources */,
+				845D5ADC25BDDF260051FBF7 /* IB-Segues+Generated.swift in Sources */,
+				845D5ADD25BDDF260051FBF7 /* IB-Scenes+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +546,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8422368425BD20F1000D4D86 /* RemoteSwiftPackageReference */ = {
+		8422368425BD20F1000D4D86 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
@@ -516,9 +557,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8422368525BD20F1000D4D86 /* SwiftPackageProductDependency */ = {
+		8422368525BD20F1000D4D86 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8422368425BD20F1000D4D86 /* RemoteSwiftPackageReference */;
+			package = 8422368425BD20F1000D4D86 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
