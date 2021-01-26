@@ -41,10 +41,19 @@ class MountainDetailViewController: UIViewController {
         prefectures.text = mountainInfo.prefectures.joined(separator: "/")
         descriptionMt.text = mountainInfo.description
 
-        // 仮入
-        recommendMtImage1.pin_setImage(from: URL(string: mountainInfo.thumbnailUrl)!)
-        recommendMtName1.text = mountainInfo.name
-        recommendMtImage2.pin_setImage(from: URL(string: mountainInfo.thumbnailUrl)!)
-        recommendMtName2.text = mountainInfo.name
+        showRecommendMt()
+    }
+
+    private func showRecommendMt() {
+        let mountains = model.recommendMountains()
+
+        // 一つ目
+        let firstMountain = mountains[0]
+        recommendMtImage1.pin_setImage(from: URL(string: firstMountain.imageUrl)!)
+        recommendMtName1.text = firstMountain.name
+
+        let secondMountain = mountains[1]
+        recommendMtImage2.pin_setImage(from: URL(string: secondMountain.imageUrl)!)
+        recommendMtName2.text = secondMountain.name
     }
 }

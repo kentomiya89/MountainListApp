@@ -59,3 +59,10 @@ struct MountainInfo: Decodable {
         thumbnailUrl = try values.decode(String.self, forKey: .thumbnailUrl)
     }
 }
+
+extension MountainInfo: Equatable {
+
+    static func == (left: MountainInfo, right: MountainInfo) -> Bool {
+        return left.id == right.id
+    }
+}
