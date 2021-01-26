@@ -10,7 +10,7 @@ import Foundation
 class MtInfoCommonData {
 
     private(set) var mountains: [MountainInfo] = []
-    private(set) var selectedIndex: Int = 0
+    private(set) var selectedMtId: Int = 0
 
     static let shared = MtInfoCommonData()
     private init() {}
@@ -19,7 +19,7 @@ class MtInfoCommonData {
         self.mountains = mountainInfo
     }
 
-    func saveSelectedIndex(_ index: Int) {
-        self.selectedIndex = index
+    func saveSelectedMountain(_ mountainID: Int) {
+        self.selectedMtId = mountainID
     }
 }

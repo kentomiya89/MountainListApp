@@ -16,8 +16,9 @@ final class MountainDetailModel: MountainDetailModelInput {
     private let shared = MtInfoCommonData.shared
 
     func mountainInfo() -> MountainInfo {
-        let index = shared.selectedIndex
-        return shared.mountains[index]
+        let mountainID = shared.selectedMtId
+        let mountain = shared.mountains.filter { $0.id == mountainID }
+        return mountain[0]
     }
 
     // おすすめの基準　同じエリア > 難易度 > ID　で優先して探す

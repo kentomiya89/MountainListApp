@@ -40,6 +40,7 @@ final class MountainListModel: MountainListModelInput {
     }
 
     func selectMountainInfo(index: Int) {
-        shared.saveSelectedIndex(index)
+        let mountain = mountains[index]
+        shared.saveSelectedMountain(mountain.id)
     }
 }
