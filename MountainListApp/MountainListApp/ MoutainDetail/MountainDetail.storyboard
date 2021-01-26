@@ -120,11 +120,15 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-5z-4zo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="138.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TDB-BR-bki">
+                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TDB-BR-bki">
                                                                         <rect key="frame" x="0.0" y="0.0" width="146" height="110"/>
+                                                                        <gestureRecognizers/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="110" id="W78-5h-LsO"/>
                                                                         </constraints>
+                                                                        <connections>
+                                                                            <outletCollection property="gestureRecognizers" destination="aBy-3z-G5f" appends="YES" id="zkJ-Cw-PyO"/>
+                                                                        </connections>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="山の名前" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF5-DX-ku6">
                                                                         <rect key="frame" x="38" y="118" width="69.5" height="20.5"/>
@@ -137,11 +141,15 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xU1-fO-OQ2">
                                                                 <rect key="frame" x="178" y="0.0" width="146" height="138.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-ZN-5Qt">
+                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-ZN-5Qt">
                                                                         <rect key="frame" x="0.0" y="0.0" width="146" height="110"/>
+                                                                        <gestureRecognizers/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="110" id="HHg-9u-d6x"/>
                                                                         </constraints>
+                                                                        <connections>
+                                                                            <outletCollection property="gestureRecognizers" destination="Q7n-ad-R5O" appends="YES" id="JaS-73-cAu"/>
+                                                                        </connections>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="山の名前" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L25-7u-eCY">
                                                                         <rect key="frame" x="38.5" y="118" width="69.5" height="20.5"/>
@@ -206,6 +214,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JgI-3B-zdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aBy-3z-G5f">
+                    <connections>
+                        <action selector="tapRecommendMt1:" destination="FP9-cG-qBB" id="OwM-Tc-SRz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Q7n-ad-R5O">
+                    <connections>
+                        <action selector="tapRecommendMt2:" destination="FP9-cG-qBB" id="kOB-h5-zev"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-191.30434782608697" y="87.723214285714278"/>
         </scene>

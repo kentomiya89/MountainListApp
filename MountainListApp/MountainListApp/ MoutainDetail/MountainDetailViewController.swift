@@ -24,6 +24,7 @@ class MountainDetailViewController: UIViewController {
     @IBOutlet weak var recommendMtName2: UILabel!
 
     var model: MountainDetailModel!
+    var recommendMountains: [MountainInfo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,15 +46,30 @@ class MountainDetailViewController: UIViewController {
     }
 
     private func showRecommendMt() {
-        let mountains = model.recommendMountains()
+        recommendMountains = model.recommendMountains()
 
         // 一つ目
-        let firstMountain = mountains[0]
+        let firstMountain = recommendMountains[0]
         recommendMtImage1.pin_setImage(from: URL(string: firstMountain.imageUrl)!)
         recommendMtName1.text = firstMountain.name
 
-        let secondMountain = mountains[1]
+        let secondMountain = recommendMountains[1]
         recommendMtImage2.pin_setImage(from: URL(string: secondMountain.imageUrl)!)
         recommendMtName2.text = secondMountain.name
+    }
+
+    @IBAction func tapRecommendMt1(_ sender: Any) {
+        transion(recommendMountains[0])
+    }
+
+    @IBAction func tapRecommendMt2(_ sender: Any) {
+        transion(recommendMountains[1])
+    }
+
+    func transion(_ mountain: MountainInfo) {
+        // 山のIDを保存
+        model.selectedMountain(mountain.id)
+        navigationController?.pushViewController(StoryboardScene.MountainDetail.initialScene.instantiate(),
+                                                 animated: true)
     }
 }

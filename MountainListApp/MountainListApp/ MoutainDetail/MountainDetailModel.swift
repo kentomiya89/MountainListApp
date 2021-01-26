@@ -10,6 +10,7 @@ import Foundation
 protocol MountainDetailModelInput {
     func mountainInfo() -> MountainInfo
     func recommendMountains() -> [MountainInfo]
+    func selectedMountain(_ mountainId: Int)
 }
 
 final class MountainDetailModel: MountainDetailModelInput {
@@ -19,6 +20,10 @@ final class MountainDetailModel: MountainDetailModelInput {
         let mountainID = shared.selectedMtId
         let mountain = shared.mountains.filter { $0.id == mountainID }
         return mountain[0]
+    }
+    
+    func selectedMountain(_ mountainId: Int) {
+        shared.saveSelectedMountain(mountainId)
     }
 
     // おすすめの基準　同じエリア > 難易度 > ID　で優先して探す
