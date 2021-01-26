@@ -19,5 +19,10 @@ class MountainCell: UITableViewCell {
         mountainName.text = mountainInfo.name
         thumbupCount.text = String(mountainInfo.likeCount)
         thumbnail.pin_setImage(from: URL(string: mountainInfo.thumbnailUrl)!)
+
+        // 色と画像
+        thumbupImage.image = mountainInfo.isLike ? Asset.Image.thumbupOrange.image : Asset.Image.thumbup.image
+        thumbupLabel.textColor = mountainInfo.isLike ? Asset.Color.thumBup.color : UIColor.label
+        thumbupCount.textColor = mountainInfo.isLike ? Asset.Color.thumBup.color : UIColor.label
     }
 }

@@ -16,7 +16,8 @@ class MountainDetailViewController: UIViewController {
     @IBOutlet weak var elevation: UILabel!
     @IBOutlet weak var thumbupCount: UILabel!
     @IBOutlet weak var descriptionMt: UILabel!
-
+    @IBOutlet weak var thumBupLabel: UILabel!
+    
     @IBOutlet weak var recommendMtImage1: UIImageView!
     @IBOutlet weak var recommendMtName1: UILabel!
 
@@ -42,6 +43,11 @@ class MountainDetailViewController: UIViewController {
         prefectures.text = mountainInfo.prefectures.joined(separator: "/")
         descriptionMt.text = mountainInfo.description
 
+        // 色
+        thumbupCount.textColor = mountainInfo.isLike ? Asset.Color.thumBup.color : UIColor.label
+        thumBupLabel.textColor = mountainInfo.isLike ? Asset.Color.thumBup.color : UIColor.label
+
+        // オススメの山表示
         showRecommendMt()
     }
 

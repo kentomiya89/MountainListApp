@@ -17,6 +17,7 @@
 		842236A525BD71FE000D4D86 /* MountainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842236A425BD71FE000D4D86 /* MountainCell.xib */; };
 		842236A925BD7A22000D4D86 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842236A825BD7A22000D4D86 /* Define.swift */; };
 		842236AD25BD7EF5000D4D86 /* MountainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842236AC25BD7EF5000D4D86 /* MountainCell.swift */; };
+		843ABC1B25C016A8004A07AA /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843ABC1A25C016A8004A07AA /* Color.xcassets */; };
 		845D5ADC25BDDF260051FBF7 /* IB-Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5AD925BDDF250051FBF7 /* IB-Segues+Generated.swift */; };
 		845D5ADD25BDDF260051FBF7 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5ADA25BDDF250051FBF7 /* IB-Scenes+Generated.swift */; };
 		845D5ADE25BDDF260051FBF7 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D5ADB25BDDF260051FBF7 /* XCAssets+Generated.swift */; };
@@ -45,6 +46,7 @@
 		842236A425BD71FE000D4D86 /* MountainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MountainCell.xib; sourceTree = "<group>"; };
 		842236A825BD7A22000D4D86 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		842236AC25BD7EF5000D4D86 /* MountainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainCell.swift; sourceTree = "<group>"; };
+		843ABC1A25C016A8004A07AA /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		845D5AD925BDDF250051FBF7 /* IB-Segues+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Segues+Generated.swift"; sourceTree = "<group>"; };
 		845D5ADA25BDDF250051FBF7 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
 		845D5ADB25BDDF260051FBF7 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
@@ -159,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				845D5B0B25BEE1F00051FBF7 /* Localized.strings */,
+				84A83E1E25BC7B7200587112 /* Image.xcassets */,
+				843ABC1A25C016A8004A07AA /* Color.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,7 +196,6 @@
 				8422369E25BD681A000D4D86 /* Misc */,
 				845D5B0A25BEE1CA0051FBF7 /* Resources */,
 				84A83E1525BC7B6F00587112 /* AppDelegate.swift */,
-				84A83E1E25BC7B7200587112 /* Image.xcassets */,
 				84A83E2025BC7B7200587112 /* LaunchScreen.storyboard */,
 				84A83E2325BC7B7200587112 /* Info.plist */,
 			);
@@ -279,6 +282,7 @@
 				84A83E2225BC7B7200587112 /* LaunchScreen.storyboard in Resources */,
 				842236A525BD71FE000D4D86 /* MountainCell.xib in Resources */,
 				84A83E1F25BC7B7200587112 /* Image.xcassets in Resources */,
+				843ABC1B25C016A8004A07AA /* Color.xcassets in Resources */,
 				84A83E1D25BC7B6F00587112 /* MountainList.storyboard in Resources */,
 				845D5B0C25BEE1F00051FBF7 /* Localized.strings in Resources */,
 			);

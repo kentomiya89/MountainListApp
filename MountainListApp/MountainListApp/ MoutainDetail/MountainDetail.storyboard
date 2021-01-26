@@ -210,6 +210,7 @@
                         <outlet property="recommendMtImage2" destination="Thc-ZN-5Qt" id="Vjf-EC-xGP"/>
                         <outlet property="recommendMtName1" destination="nF5-DX-ku6" id="793-ws-soK"/>
                         <outlet property="recommendMtName2" destination="L25-7u-eCY" id="zmt-B3-RUG"/>
+                        <outlet property="thumBupLabel" destination="pij-Rs-uYY" id="fTK-Xz-z8N"/>
                         <outlet property="thumbupCount" destination="Vg6-SZ-k2P" id="ysN-N7-xBX"/>
                     </connections>
                 </viewController>
