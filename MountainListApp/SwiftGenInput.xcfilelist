@@ -7,4 +7,5 @@ $(SRCROOT)/MountainListApp/MountainList/Base.lproj/MountainList.storyboard
 $(SRCROOT)/MountainListApp/Resources/Localized.strings
 
 # xcassets
-$(SRCROOT)/MountainListApp/Image.xcassets
+$(SRCROOT)/MountainListApp/Resources/Color.xcassets
+$(SRCROOT)/MountainListApp/Resources/Image.xcassets

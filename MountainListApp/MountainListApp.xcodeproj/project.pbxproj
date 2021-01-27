@@ -352,7 +352,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -f ../Mintfile ]] ; then\n  mint run swiftgen config run --config swiftgen.yml\nelse\n  echo \"SwiftGen not installed\"\nfi\n";
+			shellScript = "if [[ -f ../Mintfile ]] ; then\n  mint run swiftgen config generate-xcfilelists --inputs SwiftGenInput.xcfilelist --outputs SwiftGenOutput.xcfilelist\n  mint run swiftgen config run --config swiftgen.yml\nelse\n  echo \"SwiftGen not installed\"\nfi\n";
 		};
 		84A83E2A25BC7DC700587112 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
