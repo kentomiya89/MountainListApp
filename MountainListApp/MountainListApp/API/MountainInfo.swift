@@ -13,6 +13,7 @@ struct MountainInfo: Decodable {
     let description: String
     let difficultyLevel: Int
     let elevation: Float
+    // swiftlint:disable identifier_name
     let id: Int
     let imageUrl: String
     var isLike: Bool
@@ -29,6 +30,7 @@ struct MountainInfo: Decodable {
         case description
         case difficultyLevel = "difficulty_level"
         case elevation
+        // swiftlint:disable identifier_name
         case id
         case imageUrl = "image_url"
         case isLike = "is_like"

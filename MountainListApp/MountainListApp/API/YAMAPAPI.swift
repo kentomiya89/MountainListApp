@@ -10,6 +10,7 @@ import Foundation
 final class YAMAPAPI {
 
     struct MoutainsList: APIRequest {
+        // swiftlint:disable nesting
         typealias Response = [MountainInfo]
 
         var path: String {
