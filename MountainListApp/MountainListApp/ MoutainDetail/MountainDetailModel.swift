@@ -69,6 +69,10 @@ final class MountainDetailModel: MountainDetailModelInput {
         let mountain = mountainInfo()
         shared.changeMtThumbupStatus(mountain: mountain)
     }
+}
+
+// MARK: 内部的なオススメアルゴリズム
+extension MountainDetailModel {
 
     // 同じエリアでオススメを探す
     private func searchSameAreaMountains() -> [MountainInfo] {

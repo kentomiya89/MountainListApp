@@ -27,6 +27,7 @@ final class MountainListModel: MountainListModelInput {
             switch result {
             case .success(let response):
                 completionHandler(response)
+                // マスターデータの方にも保存
                 self?.shared.saveMountainsInfo(response)
             case .failure: print("取得失敗")
             }

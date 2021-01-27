@@ -87,25 +87,26 @@ class MountainDetailViewController: UIViewController {
     private func showRecommendMt() {
         recommendMountains = model.recommendMountains()
 
-        // 一つ目
+        // 1つ目
         let firstMountain = recommendMountains[0]
         recommendMtImage1.pin_setImage(from: URL(string: firstMountain.imageUrl)!)
         recommendMtName1.text = firstMountain.name
 
+        // 2つ目
         let secondMountain = recommendMountains[1]
         recommendMtImage2.pin_setImage(from: URL(string: secondMountain.imageUrl)!)
         recommendMtName2.text = secondMountain.name
     }
 
     @IBAction func tapRecommendMt1(_ sender: Any) {
-        transion(recommendMountains[0])
+        transition(recommendMountains[0])
     }
 
     @IBAction func tapRecommendMt2(_ sender: Any) {
-        transion(recommendMountains[1])
+        transition(recommendMountains[1])
     }
 
-    func transion(_ mountain: MountainInfo) {
+    func transition(_ mountain: MountainInfo) {
         // 山のIDを保存
         model.selectedMountain(mountain.id)
         navigationController?.pushViewController(StoryboardScene.MountainDetail.initialScene.instantiate(),
