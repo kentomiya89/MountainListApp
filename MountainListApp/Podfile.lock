@@ -1,4 +1,51 @@
 PODS:
+  - MaterialComponents/AnimationTiming (120.0.0)
+  - MaterialComponents/Availability (120.0.0)
+  - MaterialComponents/Buttons (120.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (120.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (120.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (120.0.0)
+  - MaterialComponents/private/Color (120.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (120.0.0)
+  - MaterialComponents/Ripple (120.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (120.0.0)
+  - MaterialComponents/ShadowLayer (120.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (120.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (120.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Typography (120.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MDFTextAccessibility
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -16,19 +63,26 @@ PODS:
     - PINRemoteImage/Core
 
 DEPENDENCIES:
-  - PINRemoteImage
+  - MaterialComponents/Buttons (~> 120.0.0)
+  - PINRemoteImage (~> 3.0.3)
 
 SPEC REPOS:
   trunk:
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - PINCache
     - PINOperation
     - PINRemoteImage
 
 SPEC CHECKSUMS:
+  MaterialComponents: 1f521dc333679daf0a397fe9dafe1e26ae13da78
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
 
-PODFILE CHECKSUM: 6ed9c05ab483438a99403f9ed3a12c6893549a8c
+PODFILE CHECKSUM: 0dcc239cf48cd5c15b5b5954ff6b77afff4c477a
 
 COCOAPODS: 1.10.0

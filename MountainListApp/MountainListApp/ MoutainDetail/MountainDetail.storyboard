@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FP9-cG-qBB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HQL-Ig-Bwk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--山詳細画面-->
-        <scene sceneID="iTq-nr-Fsa">
+        <scene sceneID="sUA-vs-17I">
             <objects>
-                <viewController title="山詳細画面" id="FP9-cG-qBB" customClass="MountainDetailViewController" customModule="MountainListApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xqc-Gk-Zdd">
+                <viewController title="山詳細画面" id="HQL-Ig-Bwk" customClass="MtContainerViewController" customModule="MountainListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAK-Ee-NjB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-XX-qSv">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxJ-J9-Rn3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="FP9-cG-qBB" kind="embed" id="wP7-5S-heV"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21f-GK-qgo" customClass="MDCFloatingButton">
+                                <rect key="frame" x="333" y="803" width="56" height="34"/>
+                                <color key="backgroundColor" name="ThumBup"/>
+                                <state key="normal" title="いいね">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedThumbup:" destination="HQL-Ig-Bwk" eventType="touchUpInside" id="p3D-5q-Tov"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vqx-FI-lla"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RxJ-J9-Rn3" firstAttribute="leading" secondItem="Vqx-FI-lla" secondAttribute="leading" id="0NU-CA-kK6"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="trailing" secondItem="21f-GK-qgo" secondAttribute="trailing" constant="25" id="KPn-TW-B0p"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="bottom" secondItem="21f-GK-qgo" secondAttribute="bottom" constant="25" id="StQ-JG-2bq"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="bottom" secondItem="RxJ-J9-Rn3" secondAttribute="bottom" id="csk-EE-QJz"/>
+                            <constraint firstItem="RxJ-J9-Rn3" firstAttribute="top" secondItem="Vqx-FI-lla" secondAttribute="top" id="yXK-bH-5oA"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="trailing" secondItem="RxJ-J9-Rn3" secondAttribute="trailing" id="zVf-b5-EaE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBq-2y-Nkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1177" y="88"/>
+        </scene>
+        <!--Mountain Detail View Controller-->
+        <scene sceneID="iTq-nr-Fsa">
+            <objects>
+                <viewController id="FP9-cG-qBB" customClass="MountainDetailViewController" customModule="MountainListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqc-Gk-Zdd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-XX-qSv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjl-1z-kZW" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="582.5"/>
@@ -226,10 +268,16 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-191.30434782608697" y="87.723214285714278"/>
+            <point key="canvasLocation" x="-170" y="88"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="ThumBup">
+            <color red="1" green="0.58143383264541626" blue="0.1725260466337204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
