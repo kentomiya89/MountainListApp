@@ -8,39 +8,42 @@
 import Foundation
 
 protocol MountainListModelInput {
-    func fetchMountainInfo()
+    func fetchMountainInfo(completionHandler: @escaping([MountainInfo]) -> Void)
+    func fetchLatestData() -> [MountainInfo]
     func selectMountainInfo(index: Int)
+    func changeThumBupStatus(_ index: Int)
 }
 
 final class MountainListModel: MountainListModelInput {
 
-    private let notificationCenter = NotificationCenter.default
+    let notificationCenter = NotificationCenter.default
     private let shared = MtInfoCommonData.shared
 
-    private(set) var mountains: [MountainInfo] = [] {
-        didSet {
-            notificationCenter.post(name: .fetchMountainInfo, object: nil)
-        }
-    }
-
-    func fetchMountainInfo() {
+    func fetchMountainInfo(completionHandler: @escaping([MountainInfo]) -> Void) {
 
         let moutainsAPI = YAMAPAPI.MoutainsList()
 
         APIClient().request(moutainsAPI) { [weak self] result in
-
             switch result {
             case .success(let response):
-                self?.mountains = response
-                guard let mountains = self?.mountains else { return }
-                self?.shared.saveMountainsInfo(mountains)
+                completionHandler(response)
+                self?.shared.saveMountainsInfo(response)
             case .failure: print("取得失敗")
             }
         }
     }
 
     func selectMountainInfo(index: Int) {
-        let mountain = mountains[index]
+        let mountain = shared.mountains[index]
         shared.saveSelectedMountain(mountain.id)
+    }
+
+    func changeThumBupStatus(_ index: Int) {
+        let mountain = shared.mountains[index]
+        shared.changeMtThumbupStatus(mountain: mountain)
+    }
+
+    func fetchLatestData() -> [MountainInfo] {
+        return shared.mountains
     }
 }

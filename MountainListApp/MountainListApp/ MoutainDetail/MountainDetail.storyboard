@@ -273,7 +273,7 @@
     </scenes>
     <resources>
         <namedColor name="ThumBup">
-            <color red="1" green="0.58143383264541626" blue="0.1725260466337204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58099997043609619" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

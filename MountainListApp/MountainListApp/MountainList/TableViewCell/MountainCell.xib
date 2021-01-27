@@ -32,17 +32,17 @@
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6iS-rv-def">
                         <rect key="frame" x="266.5" y="81" width="143.5" height="25"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumbup" translatesAutoresizingMaskIntoConstraints="NO" id="4zB-xi-nzv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSW-Nv-nwS">
                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="hLb-q0-OCu"/>
-                                    <constraint firstAttribute="height" constant="25" id="wm6-BM-xaU"/>
+                                    <constraint firstAttribute="height" constant="25" id="EpN-0d-ran"/>
+                                    <constraint firstAttribute="width" constant="25" id="dcL-38-0ob"/>
                                 </constraints>
+                                <state key="normal" backgroundImage="Thumbup"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Thy-LP-g8M" appends="YES" id="8Qe-Mo-pRd"/>
+                                    <action selector="tappedThumBup:" destination="Uhf-45-cQf" eventType="touchUpInside" id="gQw-dQ-rid"/>
                                 </connections>
-                            </imageView>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いいね！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4n-8R-TWX">
                                 <rect key="frame" x="29" y="3" width="65.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -73,16 +73,11 @@
                 <outlet property="mountainName" destination="YQK-pe-mSI" id="HDG-KM-8lY"/>
                 <outlet property="thumbnail" destination="vG1-Tx-bM0" id="oIY-sk-GVq"/>
                 <outlet property="thumbupCount" destination="Yco-Fb-D3S" id="aoB-g8-0Qx"/>
-                <outlet property="thumbupImage" destination="4zB-xi-nzv" id="VzS-n4-qfF"/>
+                <outlet property="thumbupImage" destination="WSW-Nv-nwS" id="eqe-UB-8AM"/>
                 <outlet property="thumbupLabel" destination="d4n-8R-TWX" id="3Dr-yl-77B"/>
             </connections>
             <point key="canvasLocation" x="273.91304347826087" y="72.991071428571431"/>
         </tableViewCell>
-        <tapGestureRecognizer id="Thy-LP-g8M">
-            <connections>
-                <action selector="tappedThumBup:" destination="Uhf-45-cQf" id="hdN-yv-83f"/>
-            </connections>
-        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="Thumbup" width="22" height="22"/>

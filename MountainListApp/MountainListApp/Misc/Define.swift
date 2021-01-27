@@ -14,3 +14,7 @@ struct NibFileName {
 struct TableViewCellID {
     static let mountainCell = "mountain_cell"
 }
+
+struct UserInfo {
+    static let mountainsIndexKey = "mountainsIndexKey"
+}

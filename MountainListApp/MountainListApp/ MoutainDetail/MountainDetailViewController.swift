@@ -17,7 +17,7 @@ class MountainDetailViewController: UIViewController {
     @IBOutlet weak var thumbupCount: UILabel!
     @IBOutlet weak var descriptionMt: UILabel!
     @IBOutlet weak var thumBupLabel: UILabel!
-    
+
     @IBOutlet weak var recommendMtImage1: UIImageView!
     @IBOutlet weak var recommendMtName1: UILabel!
 
@@ -34,8 +34,41 @@ class MountainDetailViewController: UIViewController {
         configMountainInfo()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUpNotifications()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeNotifications()
+    }
+
+    func setUpNotifications() {
+        model.notificationCenter.addObserver(self,
+                                             selector: #selector(updateThumBup),
+                                             name: .changeMountainInfo,
+                                             object: nil)
+    }
+
+    func removeNotifications() {
+        model.removeObserverInModel()
+        model.notificationCenter.removeObserver(self,
+                                                name: .changeMountainInfo,
+                                                object: nil)
+    }
+
+    @objc func updateThumBup() {
+        let mountainInfo = model.mountainInfo()
+        thumbupCount.text = String(mountainInfo.likeCount)
+        // 色
+        thumbupCount.textColor = mountainInfo.isLike ? Asset.Color.thumBup.color : UIColor.label
+        thumBupLabel.textColor = mountainInfo.isLike ? Asset.Color.thumBup.color : UIColor.label
+    }
+
     func configMountainInfo() {
         let mountainInfo = model.mountainInfo()
+
         mountainImage.pin_setImage(from: URL(string: mountainInfo.imageUrl)!)
         mountainName.text = mountainInfo.name
         elevation.text = String(mountainInfo.elevation) + L10n.meter

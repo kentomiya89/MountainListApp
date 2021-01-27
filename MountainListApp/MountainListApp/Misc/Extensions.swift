@@ -21,5 +21,6 @@ extension String {
 }
 
 extension Notification.Name {
-    static let fetchMountainInfo = Notification.Name("fetchMountainInfo")
+    static let tappedThumBup = Notification.Name("tappedThumBup")
+    static let changeMountainInfo = Notification.Name("changeMountainInfo")
 }

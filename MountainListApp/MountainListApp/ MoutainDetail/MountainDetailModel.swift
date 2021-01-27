@@ -15,13 +15,28 @@ protocol MountainDetailModelInput {
 
 final class MountainDetailModel: MountainDetailModelInput {
     private let shared = MtInfoCommonData.shared
+    let notificationCenter = NotificationCenter.default
 
+    init() {
+        notificationCenter.addObserver(self,
+                                       selector: #selector(changeIsLikeStatus),
+                                       name: .tappedThumBup,
+                                       object: nil)
+    }
+
+    func removeObserverInModel() {
+        notificationCenter.removeObserver(self,
+                                          name: .tappedThumBup,
+                                          object: nil)
+    }
+
+    // 表示している山の情報
     func mountainInfo() -> MountainInfo {
         let mountainID = shared.selectedMtId
         let mountain = shared.mountains.filter { $0.id == mountainID }
         return mountain[0]
     }
-    
+
     func selectedMountain(_ mountainId: Int) {
         shared.saveSelectedMountain(mountainId)
     }
@@ -48,6 +63,11 @@ final class MountainDetailModel: MountainDetailModelInput {
         // 1回目も2回目も満たす数が見つけれなければ
         // 異なるIDで最終的に返す
         return searchDifferentIDMt(with: mtsInfo)
+    }
+
+    @objc func changeIsLikeStatus() {
+        let mountain = mountainInfo()
+        shared.changeMtThumbupStatus(mountain: mountain)
     }
 
     // 同じエリアでオススメを探す

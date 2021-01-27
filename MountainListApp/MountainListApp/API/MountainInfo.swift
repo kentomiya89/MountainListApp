@@ -15,9 +15,9 @@ struct MountainInfo: Decodable {
     let elevation: Float
     let id: Int
     let imageUrl: String
-    let isLike: Bool
+    var isLike: Bool
     let latitude: Float
-    let likeCount: Int
+    var likeCount: Int
     let longitude: Float
     let name: String
     let physicalLevel: Int
