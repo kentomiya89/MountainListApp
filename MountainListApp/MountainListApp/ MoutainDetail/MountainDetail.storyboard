@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HQL-Ig-Bwk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--山詳細画面-->
+        <scene sceneID="sUA-vs-17I">
+            <objects>
+                <viewController title="山詳細画面" id="HQL-Ig-Bwk" customClass="MtContainerViewController" customModule="MountainListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAK-Ee-NjB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxJ-J9-Rn3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="FP9-cG-qBB" kind="embed" id="wP7-5S-heV"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21f-GK-qgo" customClass="MDCFloatingButton">
+                                <rect key="frame" x="333" y="803" width="56" height="34"/>
+                                <color key="backgroundColor" name="ThumBup"/>
+                                <state key="normal" title="いいね">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedThumbup:" destination="HQL-Ig-Bwk" eventType="touchUpInside" id="p3D-5q-Tov"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vqx-FI-lla"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RxJ-J9-Rn3" firstAttribute="leading" secondItem="Vqx-FI-lla" secondAttribute="leading" id="0NU-CA-kK6"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="trailing" secondItem="21f-GK-qgo" secondAttribute="trailing" constant="25" id="KPn-TW-B0p"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="bottom" secondItem="21f-GK-qgo" secondAttribute="bottom" constant="25" id="StQ-JG-2bq"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="bottom" secondItem="RxJ-J9-Rn3" secondAttribute="bottom" id="csk-EE-QJz"/>
+                            <constraint firstItem="RxJ-J9-Rn3" firstAttribute="top" secondItem="Vqx-FI-lla" secondAttribute="top" id="yXK-bH-5oA"/>
+                            <constraint firstItem="Vqx-FI-lla" firstAttribute="trailing" secondItem="RxJ-J9-Rn3" secondAttribute="trailing" id="zVf-b5-EaE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBq-2y-Nkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1177" y="88"/>
+        </scene>
+        <!--Mountain Detail View Controller-->
+        <scene sceneID="iTq-nr-Fsa">
+            <objects>
+                <viewController id="FP9-cG-qBB" customClass="MountainDetailViewController" customModule="MountainListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqc-Gk-Zdd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-XX-qSv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjl-1z-kZW" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="582.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-kb-VlA">
+                                                <rect key="frame" x="45" y="10" width="324" height="572.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-SV-KXS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="128"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="山の名前" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKf-Wd-zAM">
+                                                                <rect key="frame" x="0.0" y="4" width="93.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mrq-0o-OjE">
+                                                                <rect key="frame" x="228" y="4" width="92" height="114"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いいね！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pij-Rs-uYY">
+                                                                        <rect key="frame" x="0.0" y="46.5" width="73.5" height="21.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="０" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-SZ-k2P">
+                                                                        <rect key="frame" x="73.5" y="46.5" width="18.5" height="21.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-cZ-Bs4">
+                                                                <rect key="frame" x="0.0" y="39.5" width="37" height="43"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="県名" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9y-SU-lUE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="21.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標高" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubY-J5-mvm">
+                                                                        <rect key="frame" x="0.0" y="21.5" width="37" height="21.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="uKf-Wd-zAM" firstAttribute="top" secondItem="OpQ-SV-KXS" secondAttribute="top" constant="4" id="DFt-sG-jdy"/>
+                                                            <constraint firstItem="Ueq-cZ-Bs4" firstAttribute="top" secondItem="uKf-Wd-zAM" secondAttribute="bottom" constant="8" id="HDZ-qS-iw1"/>
+                                                            <constraint firstAttribute="bottom" secondItem="mrq-0o-OjE" secondAttribute="bottom" constant="10" id="HFY-pC-lps"/>
+                                                            <constraint firstItem="Ueq-cZ-Bs4" firstAttribute="leading" secondItem="uKf-Wd-zAM" secondAttribute="leading" id="Iji-sH-L9x"/>
+                                                            <constraint firstAttribute="trailing" secondItem="mrq-0o-OjE" secondAttribute="trailing" constant="4" id="MIp-5n-xP9"/>
+                                                            <constraint firstItem="uKf-Wd-zAM" firstAttribute="leading" secondItem="OpQ-SV-KXS" secondAttribute="leading" id="Nic-SW-LB7"/>
+                                                            <constraint firstItem="mrq-0o-OjE" firstAttribute="centerY" secondItem="Ueq-cZ-Bs4" secondAttribute="centerY" id="tEZ-nu-Zbo"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p3E-NT-I9o">
+                                                        <rect key="frame" x="0.0" y="148" width="324" height="180"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="ipd-jx-avq"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="山の説明" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKS-xO-CUP">
+                                                        <rect key="frame" x="0.0" y="348" width="324" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-3g-t2g">
+                                                        <rect key="frame" x="0.0" y="388.5" width="324" height="25.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6N-tM-l2I">
+                                                                <rect key="frame" x="0.0" y="0.0" width="324" height="1"/>
+                                                                <color key="backgroundColor" name="Separater"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="JDp-hr-VQ2"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おすすめの山" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSQ-J2-1L3">
+                                                                <rect key="frame" x="0.0" y="5" width="104" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="b6N-tM-l2I" firstAttribute="width" secondItem="cEO-3g-t2g" secondAttribute="width" id="GGd-rL-fav"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="njZ-yM-yUs">
+                                                        <rect key="frame" x="0.0" y="434" width="324" height="138.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-5z-4zo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="146" height="138.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TDB-BR-bki">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="110"/>
+                                                                        <gestureRecognizers/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="110" id="W78-5h-LsO"/>
+                                                                        </constraints>
+                                                                        <connections>
+                                                                            <outletCollection property="gestureRecognizers" destination="aBy-3z-G5f" appends="YES" id="zkJ-Cw-PyO"/>
+                                                                        </connections>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="山の名前" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF5-DX-ku6">
+                                                                        <rect key="frame" x="38" y="118" width="69.5" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xU1-fO-OQ2">
+                                                                <rect key="frame" x="178" y="0.0" width="146" height="138.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-ZN-5Qt">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="110"/>
+                                                                        <gestureRecognizers/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="110" id="HHg-9u-d6x"/>
+                                                                        </constraints>
+                                                                        <connections>
+                                                                            <outletCollection property="gestureRecognizers" destination="Q7n-ad-R5O" appends="YES" id="JaS-73-cAu"/>
+                                                                        </connections>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="山の名前" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L25-7u-eCY">
+                                                                        <rect key="frame" x="38.5" y="118" width="69.5" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Thc-ZN-5Qt" firstAttribute="width" secondItem="njZ-yM-yUs" secondAttribute="width" multiplier="0.45" id="SaR-Eq-fCX"/>
+                                                            <constraint firstItem="TDB-BR-bki" firstAttribute="width" secondItem="njZ-yM-yUs" secondAttribute="width" multiplier="0.45" id="XfB-eg-dYx"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="OpQ-SV-KXS" firstAttribute="width" secondItem="p3E-NT-I9o" secondAttribute="width" id="55j-bf-ihP"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Z5f-kb-VlA" firstAttribute="leading" secondItem="cjl-1z-kZW" secondAttribute="leading" constant="45" id="fgE-CW-fai"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z5f-kb-VlA" secondAttribute="bottom" id="hpc-yd-qGR"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z5f-kb-VlA" secondAttribute="trailing" constant="45" id="vtX-Eb-UMG"/>
+                                            <constraint firstItem="Z5f-kb-VlA" firstAttribute="top" secondItem="cjl-1z-kZW" secondAttribute="top" constant="10" id="zUf-GY-yey"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cjl-1z-kZW" firstAttribute="top" secondItem="t1w-HR-Gpx" secondAttribute="top" id="2n4-Lt-dnw"/>
+                                    <constraint firstItem="cjl-1z-kZW" firstAttribute="leading" secondItem="t1w-HR-Gpx" secondAttribute="leading" id="Bfg-bU-9xE"/>
+                                    <constraint firstItem="cjl-1z-kZW" firstAttribute="width" secondItem="xb2-Ec-aXe" secondAttribute="width" id="JNN-tW-o7W"/>
+                                    <constraint firstItem="cjl-1z-kZW" firstAttribute="trailing" secondItem="t1w-HR-Gpx" secondAttribute="trailing" id="qTz-mQ-LyG"/>
+                                    <constraint firstItem="cjl-1z-kZW" firstAttribute="bottom" secondItem="t1w-HR-Gpx" secondAttribute="bottom" id="qpP-1o-K25"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="t1w-HR-Gpx"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xb2-Ec-aXe"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xhR-uw-I33"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a8r-XX-qSv" firstAttribute="top" secondItem="xhR-uw-I33" secondAttribute="top" id="k3A-pg-uGn"/>
+                            <constraint firstItem="xhR-uw-I33" firstAttribute="bottom" secondItem="a8r-XX-qSv" secondAttribute="bottom" id="oTD-xI-phq"/>
+                            <constraint firstItem="a8r-XX-qSv" firstAttribute="leading" secondItem="xhR-uw-I33" secondAttribute="leading" id="pd7-di-ZTD"/>
+                            <constraint firstItem="xhR-uw-I33" firstAttribute="trailing" secondItem="a8r-XX-qSv" secondAttribute="trailing" id="qpb-sJ-cno"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionMt" destination="vKS-xO-CUP" id="7fp-8a-4zC"/>
+                        <outlet property="elevation" destination="ubY-J5-mvm" id="89k-hc-NvF"/>
+                        <outlet property="mountainImage" destination="p3E-NT-I9o" id="aHI-ai-jcq"/>
+                        <outlet property="mountainName" destination="uKf-Wd-zAM" id="qfJ-LY-kS8"/>
+                        <outlet property="prefectures" destination="u9y-SU-lUE" id="bOP-fI-ald"/>
+                        <outlet property="recommendMtImage1" destination="TDB-BR-bki" id="usC-cJ-wuO"/>
+                        <outlet property="recommendMtImage2" destination="Thc-ZN-5Qt" id="Vjf-EC-xGP"/>
+                        <outlet property="recommendMtName1" destination="nF5-DX-ku6" id="793-ws-soK"/>
+                        <outlet property="recommendMtName2" destination="L25-7u-eCY" id="zmt-B3-RUG"/>
+                        <outlet property="thumBupLabel" destination="pij-Rs-uYY" id="fTK-Xz-z8N"/>
+                        <outlet property="thumbupCount" destination="Vg6-SZ-k2P" id="ysN-N7-xBX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgI-3B-zdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aBy-3z-G5f">
+                    <connections>
+                        <action selector="tapRecommendMt1:" destination="FP9-cG-qBB" id="OwM-Tc-SRz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Q7n-ad-R5O">
+                    <connections>
+                        <action selector="tapRecommendMt2:" destination="FP9-cG-qBB" id="kOB-h5-zev"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-170" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Separater">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThumBup">
+            <color red="1" green="0.58099997043609619" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
